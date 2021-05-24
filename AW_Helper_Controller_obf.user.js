@@ -1,4 +1,4 @@
-// ==/UserScript==
+// ==UserScript==
 // @name          AW_Helper_Controller
 // @namespace     Violentmonkey Scripts
 // @include       *.wax.*
