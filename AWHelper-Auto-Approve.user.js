@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.121
+// @version         0.122
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
@@ -28,9 +28,9 @@ if(
 			document.querySelector('div[class*="react-ripples"]').querySelector('button') && 
 			!document.querySelector('div[class*="react-ripples"]').querySelector('button').disabled
 		){
-			setInterval(function(){document.querySelector('div[class*="react-ripples"]').querySelector('button').click()}, 1500);
+			setInterval(function(){ document.querySelector('div[class*="react-ripples"]').querySelector('button').click() }, 1500);
 		}else{
 			setTimeout(function(){thiscode()}, 1000); 
 		}; 
-	})(); setInterval(function(){document.querySelector('div[class*="react-ripples"]').querySelector('button').click()}, 180000);
+	})(); setInterval(function(){ document.querySelector('div[class*="react-ripples"]').parentElement.querySelectorAll('button')[1].click() }, 105000);
 }; 
