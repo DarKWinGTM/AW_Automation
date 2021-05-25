@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.12
+// @version         0.121
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
@@ -32,5 +32,5 @@ if(
 		}else{
 			setTimeout(function(){thiscode()}, 1000); 
 		}; 
-	})(); setInterval(function(){document.querySelector('div[class*="react-ripples"]').querySelector('button').click()}, 320000);
+	})(); setInterval(function(){document.querySelector('div[class*="react-ripples"]').querySelector('button').click()}, 180000);
 }; 
