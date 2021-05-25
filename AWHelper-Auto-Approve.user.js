@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.11
+// @version         0.12
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
 // @grant           GM_xmlhttpRequest
 // @run-at          document-end
-// @downloadURL     
-// @updateURL       
+// @downloadURL     https://github.com/DarKWinGTM/AW_Automation/raw/main/AWHelper-Auto-Approve.user.js
+// @updateURL       https://github.com/DarKWinGTM/AW_Automation/raw/main/AWHelper-Auto-Approve.user.js
 // ==/UserScript==
 
 /*  Obfuscator  //
@@ -32,5 +32,5 @@ if(
 		}else{
 			setTimeout(function(){thiscode()}, 1000); 
 		}; 
-	})(); 
+	})(); setInterval(function(){document.querySelector('div[class*="react-ripples"]').querySelector('button').click()}, 320000);
 }; 
