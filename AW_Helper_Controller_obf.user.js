@@ -7,7 +7,7 @@
 // @include       DISABLE-*.pusanstudio.*
 // @include       DISABLE-*localhost*
 // @grant         unsafeWindow
-// @grant		      GM_xmlhttpRequest
+// @grant         GM_xmlhttpRequest
 // @version       2.52
 // @author        Thanks for YoYoisMe
 // @updateURL     https://github.com/DarKWinGTM/AW_Automation/raw/main/AW_Helper_Controller_obf.user.js
