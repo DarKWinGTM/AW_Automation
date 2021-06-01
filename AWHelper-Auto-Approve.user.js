@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.130
+// @version         0.135
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
@@ -56,7 +56,7 @@ if(
     }, 40000); 
 }; 
 if(
-    domain.match('all-access.wax.io/cloud-wallet/login')
+    domain.match('all-access.wax.io/cloud-wallet/login') 
 ){
     (function thiscode(){
         if(
@@ -84,4 +84,30 @@ if(
             ], '*'); window.close(); 
         }; 
     }, 5000); 
+    (function thiscode(){
+		setTimeout(function(){
+			if(
+				document.querySelector('button[class*="waa-login-button"]')
+			){
+				try{
+					document.querySelector('button[class*="waa-login-button"]').click(); 
+				}catch(e){}; 
+			}else{ thiscode() }; 
+		}, 5000); 
+    })(); 
+}; 
+if(
+    domain == 'https://all-access.wax.io/'
+){
+    (function thiscode(){
+		setTimeout(function(){
+			if(
+				document.querySelector('button[id="google-social-btn"]')
+			){
+				try{
+					document.querySelector('button[id="google-social-btn"]').click(); 
+				}catch(e){}; 
+			}else{ thiscode() }; 
+		}, 5000); 
+    })(); 
 }; 
