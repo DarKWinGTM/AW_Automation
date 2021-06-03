@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.135
+// @version         0.136
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
@@ -26,7 +26,18 @@ if(
         if(
             document.querySelector('div[class*="react-ripples"]') && 
             document.querySelector('div[class*="react-ripples"]').querySelector('button') && 
-            !document.querySelector('div[class*="react-ripples"]').querySelector('button').disabled
+            !document.querySelector('div[class*="react-ripples"]').querySelector('button').disabled && ((
+				document.querySelector('div[class*="action-details-title"]') && 
+				document.querySelector('div[class*="action-details-title"]').innerText.match(
+					'm.federation keyboard_arrow_rightkeyboard_arrow_right mine'
+				)
+			) || (
+				domain.match('all-access.wax.io/cloud-wallet/signing') && 
+				domain.match('#') && (
+					domain.match('SWAP') || 
+					domain.match('TRANSFER')
+				)
+			))
         ){
             for(var i = 0; i < 10; i++) {
                 setTimeout(function(){
@@ -53,7 +64,7 @@ if(
             document.querySelector('div[class*="react-ripples"]').parentElement.querySelectorAll('button')[1].click(); 
         }catch(e){}; 
         setTimeout(function(){ window.close() }, 5000); 
-    }, 40000); 
+    }, 18000); 
 }; 
 if(
     domain.match('all-access.wax.io/cloud-wallet/login') 
