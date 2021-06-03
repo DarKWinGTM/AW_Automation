@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.136
+// @version         0.138
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
@@ -28,8 +28,15 @@ if(
             document.querySelector('div[class*="react-ripples"]').querySelector('button') && 
             !document.querySelector('div[class*="react-ripples"]').querySelector('button').disabled && ((
 				document.querySelector('div[class*="action-details-title"]') && 
+				document.querySelector('div[class*="action-details-title"]').innerText && 
 				document.querySelector('div[class*="action-details-title"]').innerText.match(
 					'm.federation keyboard_arrow_rightkeyboard_arrow_right mine'
+				)
+			) || (
+				document.querySelector('div[class*="simple-action-details"]') && 
+				document.querySelector('div[class*="simple-action-details"]').innerText && 
+				document.querySelector('div[class*="simple-action-details"]').innerText.match(
+					/m.federation > mine\nshow details/gi
 				)
 			) || (
 				domain.match('all-access.wax.io/cloud-wallet/signing') && 
