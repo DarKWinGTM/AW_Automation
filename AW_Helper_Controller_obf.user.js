@@ -8,7 +8,7 @@
 // @include       DISABLE-*localhost*
 // @grant         unsafeWindow
 // @grant         GM_xmlhttpRequest
-// @version       2.72
+// @version       2.75
 // @author        Thanks for YoYoisMe
 // @updateURL     https://github.com/DarKWinGTM/AW_Automation/raw/main/AW_Helper_Controller_obf.user.js
 // @downloadURL   https://github.com/DarKWinGTM/AW_Automation/raw/main/AW_Helper_Controller_obf.user.js
