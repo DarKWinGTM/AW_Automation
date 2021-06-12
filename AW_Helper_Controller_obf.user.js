@@ -10,7 +10,7 @@
 // @exclude       *.wax.*/dashboard
 // @grant         unsafeWindow
 // @grant         GM_xmlhttpRequest
-// @version       2.82
+// @version       2.84
 // @author        Thanks for YoYoisMe
 // @updateURL     https://github.com/DarKWinGTM/AW_Automation/raw/main/AW_Helper_Controller_obf.user.js
 // @downloadURL   https://github.com/DarKWinGTM/AW_Automation/raw/main/AW_Helper_Controller_obf.user.js
@@ -31,17 +31,17 @@ unsafeWindow._open  = function (u, n, f){
 
 console.save = function (){return}; 
 
-document.head.appendChild(
-    (function (){
-        object = Object.assign(document.createElement('meta'), {
-        name        : 'referrer', 
-        content     : 'no-referrer'
-        }); 
-        object.setAttribute('name', 'referrer'); 
-        object.setAttribute('content', 'no-referrer'); 
-        return object
-    })()
-); 
+//	document.head.appendChild(
+//	    (function (){
+//	        object = Object.assign(document.createElement('meta'), {
+//	        name        : 'referrer', 
+//	        content     : 'no-referrer'
+//	        }); 
+//	        object.setAttribute('name', 'referrer'); 
+//	        object.setAttribute('content', 'no-referrer'); 
+//	        return object
+//	    })()
+//	); 
 localStorage.setItem("autoLogin", 'true'); 
 if(
     !localStorage.getItem("LOG")
@@ -843,7 +843,7 @@ if (
 								GM_xmlhttpRequest({
 									method      : mineserver['mine']['methods'], 
 									url         : mineserver['mine']['address'], 
-									timeout     : 16000, 
+									timeout     : 25000, 
 									data        : mineserver['mine']['payload'], 
 									headers     : mineserver['mine']['headers'], 
 									onload      : function(res){
