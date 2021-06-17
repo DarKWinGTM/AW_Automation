@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.142
+// @version         0.143
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
@@ -75,6 +75,7 @@ if(
 				for(var i = 0; i < 10; i++) {
 					setTimeout(function(){
 						document.querySelector('button[class*="waa-login-button"]').click(); 
+						document.querySelector('button[class*="waa-login-button"]').remove(); 
 					}, (2500 * i) ); 
 				}; 
 			}else if(
@@ -83,7 +84,8 @@ if(
 			){
 				for(var i = 0; i < 10; i++) {
 					setTimeout(function(){
-						document.querySelector('div[class*="react-ripples"]').querySelector('button').click()
+						document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
+						document.querySelector('div[class*="react-ripples"]').querySelector('button').remove(); 
 					}, (2500 * i) ); 
 				}; 
 			}else{
