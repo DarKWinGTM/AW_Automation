@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name            AW-Auto-Approve
-// @version         0.151
+// @version         0.152
 // @include         *
 // @exclude         *.bloks.*
-// @exclude       	*.wax.*/dashboard
+// @exclude         *.wax.*/dashboard
+// @grant           window.focus
 // @grant           GM_xmlhttpRequest
 // @run-at          document-end
 // @downloadURL     https://github.com/DarKWinGTM/AW_Automation/raw/main/AW-Auto-Approve.user.js
@@ -50,7 +51,7 @@ if(
                 setTimeout(function(){
                     document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
                 }, (1000 * i) ); 
-            }; 
+            }; window.focus(); 
         }else{
             setTimeout(function(){thiscode()}, 500); 
         }; 
