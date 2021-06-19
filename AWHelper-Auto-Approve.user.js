@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AWHelper-Auto-Approve
-// @version         0.146
+// @version         0.147
 // @description     AWHelper-Auto-Approve
 // @author          Author
 // @include         *
@@ -48,7 +48,7 @@ if(
 				)
 			)) && !document.querySelector('button[class*="waa-login-button"]')
         ){
-            for(var i = 0; i < 10; i++) {
+            for(var i = 0; i < 3; i++) {
                 setTimeout(function(){
                     document.querySelector('div[class*="react-ripples"]').querySelector('button').click()
                 }, (1250 * i) ); 
@@ -62,7 +62,7 @@ if(
             document.querySelector('div[class*="react-ripples"]').parentElement.querySelectorAll('button')[1].click(); 
         }catch(e){}; 
         setTimeout(function(){ window.close() }, 5000); 
-    }, 20000); 
+    }, 60000); 
 }; 
 if(
     domain.match('all-access.wax.io/cloud-wallet/login') 
@@ -72,7 +72,7 @@ if(
 			if(
 				document.querySelector('button[class*="waa-login-button"]')
 			){
-				for(var i = 0; i < 2; i++) {
+				for(var i = 0; i < 3; i++) {
 					setTimeout(function(){
 						document.querySelector('button[class*="waa-login-button"]').click(); 
 					}, (2500 * i) ); 
@@ -81,7 +81,7 @@ if(
 				document.querySelector('div[class*="react-ripples"]') && 
 				document.querySelector('div[class*="react-ripples"]').querySelector('button')
 			){
-				for(var i = 0; i < 2; i++) {
+				for(var i = 0; i < 3; i++) {
 					setTimeout(function(){
 						document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
 					}, (2500 * i) ); 
