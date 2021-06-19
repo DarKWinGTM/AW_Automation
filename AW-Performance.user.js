@@ -1,7 +1,6 @@
 // ==UserScript==
 // @name        AW-Performance
 // @version     0.148
-// @description AW-Performance
 // @match       *://all-access.wax.io/cloud-wallet/signing*
 // @author      Author
 // @grant       window.focus
