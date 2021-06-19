@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            AW-Auto-Approve
-// @version         0.150
+// @version         0.151
 // @include         *
 // @exclude         *.bloks.*
 // @exclude       	*.wax.*/dashboard
@@ -46,10 +46,10 @@ if(
 				)
 			)) && !document.querySelector('button[class*="waa-login-button"]')
         ){
-            for (var i = 0; i < 5; i++){
+            for (var i = 0; i < 6; i++){
                 setTimeout(function(){
                     document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
-                }, (500 * i) ); 
+                }, (1000 * i) ); 
             }; 
         }else{
             setTimeout(function(){thiscode()}, 500); 
