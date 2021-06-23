@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          AW-Controller
-// @version       3.10
+// @version       3.11
 // @include       *.alien*script.*
 // @exclude       *.bloks.*
 // @exclude       *.wax.*/dashboard
