@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name            AW-Auto-Approve
-// @version         0.152
+// @version         0.155
 // @include         *
 // @exclude         *.bloks.*
-// @exclude         *.wax.*/dashboard
+// @exclude       	*.wax.*/dashboard
 // @grant           window.focus
 // @grant           GM_xmlhttpRequest
 // @run-at          document-end
@@ -74,20 +74,20 @@ if(
 			if(
 				document.querySelector('button[class*="waa-login-button"]')
 			){
-				for(var i = 0; i < 3; i++) {
-					setTimeout(function(){
-						document.querySelector('button[class*="waa-login-button"]').click(); 
-					}, (2500 * i) ); 
-				}; 
+				document.querySelector('button[class*="waa-login-button"]').click(); 
+				//	for(var i = 0; i < 3; i++) {
+				//		setTimeout(function(){
+				//		}, (2500 * i) ); 
+				//	}; 
 			}else if(
 				document.querySelector('div[class*="react-ripples"]') && 
 				document.querySelector('div[class*="react-ripples"]').querySelector('button')
 			){
-				for(var i = 0; i < 3; i++) {
-					setTimeout(function(){
-						document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
-					}, (2500 * i) ); 
-				}; 
+				document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
+				//	for(var i = 0; i < 3; i++) {
+				//		setTimeout(function(){
+				//		}, (2500 * i) ); 
+				//	}; 
 			}else{
 				thiscode(); 
 			}; 
