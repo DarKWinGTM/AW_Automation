@@ -1,9 +1,12 @@
 // ==UserScript==
 // @name            AW-Auto-Approve
-// @version         0.155
-// @include         *
+// @version         0.157
+// @include         *.wax.io/
+// @include         *.wax.io/cloud-wallet/login*
+// @include         *.wax.io/cloud-wallet/signing*
 // @exclude         *.bloks.*
 // @exclude       	*.wax.*/dashboard
+// @grant           window.close
 // @grant           window.focus
 // @grant           GM_xmlhttpRequest
 // @run-at          document-end
@@ -39,12 +42,6 @@ if(
 				document.querySelector('div[class*="simple-action-details"]').innerText.match(
 					/m.federation > mine\nshow details/gi
 				)
-			) || (
-				domain.match('all-access.wax.io/cloud-wallet/signing') && 
-				domain.match('#') && (
-					domain.match('SWAP') || 
-					domain.match('TRANSFER')
-				)
 			)) && !document.querySelector('button[class*="waa-login-button"]')
         ){
             for (var i = 0; i < 6; i++){
@@ -60,11 +57,7 @@ if(
         try{
             document.querySelector('div[class*="react-ripples"]').parentElement.querySelectorAll('button')[1].click(); 
         }catch(e){}; 
-        //	setTimeout(function(){ window.close() }, 5000); 
-    }, 60000); 
-	//	googletagmanager.com
-	//	google-analytics.com
-	//	public-wax-on.wax.io
+    }, 60000); setTimeout(function(){ window.close() }, 1000000); 
 }; 
 if(
     domain.match('all-access.wax.io/cloud-wallet/login') 
@@ -74,7 +67,9 @@ if(
 			if(
 				document.querySelector('button[class*="waa-login-button"]')
 			){
-				document.querySelector('button[class*="waa-login-button"]').click(); 
+				setTimeout(function(){
+					document.querySelector('button[class*="waa-login-button"]').click(); 
+				}, 4000 ); 
 				//	for(var i = 0; i < 3; i++) {
 				//		setTimeout(function(){
 				//		}, (2500 * i) ); 
@@ -83,7 +78,9 @@ if(
 				document.querySelector('div[class*="react-ripples"]') && 
 				document.querySelector('div[class*="react-ripples"]').querySelector('button')
 			){
-				document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
+				setTimeout(function(){
+					document.querySelector('div[class*="react-ripples"]').querySelector('button').click(); 
+				}, 4000 ); 
 				//	for(var i = 0; i < 3; i++) {
 				//		setTimeout(function(){
 				//		}, (2500 * i) ); 
@@ -92,7 +89,7 @@ if(
 				thiscode(); 
 			}; 
 		}, 5000); 
-    })(); 
+    })(); setTimeout(function(){ window.close() }, 1000000); 
 }; 
 if(
     domain == 'https://all-access.wax.io/'
@@ -121,8 +118,7 @@ setInterval(function(){
             'COMMAND', 
             'CLOSE', 
             'ERROR : BLOCKED BY CLOUDFLARE 1020'
-        ], '*'); 
-		setTimeout(function(){ window.close() }, 5000); 
+        ], '*'); setTimeout(function(){ window.close() }, 5000); 
     }; 
 }, 5000); 
 //	setInterval(function(){
@@ -134,7 +130,6 @@ setInterval(function(){
 //				'COMMAND', 
 //				'CLOSE', 
 //				'ERROR : LOGIN NOT LOAD'
-//			], '*'); 
-//			setTimeout(function(){ window.close() }, 5000); 
+//			], '*'); setTimeout(function(){ window.close() }, 5000); 
 //		}; 
 //	}, 180000); 
